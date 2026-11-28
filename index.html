@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Facilities &amp; Drinking Water Availability — Rebala Village CSP</title>
+  <meta name="description"
+    content="Eight-week Community Service Project fieldwork documentary on water facilities and drinking water availability in Rebala Village, Buchireddypalem Mandal, SPSR Nellore District, Andhra Pradesh. Sree Venkateswara College of Engineering, Department of Artificial Intelligence.">
+  <meta name="author"
+    content="Shaik Fameed (24JNA31032), Department of Artificial Intelligence, Sree Venkateswara College of Engineering">
+  <meta property="og:title" content="Water Facilities &amp; Drinking Water Availability — Rebala Village CSP">
+  <meta property="og:description"
+    content="Editorial fieldwork monograph documenting rural drinking water infrastructure, community interactions, and eight weeks of field study in Rebala Village.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#FAF8F4">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2317596C' stroke-width='2'%3E%3Cpath d='M12 2.5C12 2.5 5.5 10.2 5.5 15a6.5 6.5 0 0 0 13 0c0-4.8-6.5-12.5-6.5-12.5Z'/%3E%3C/svg%3E">
+
+  <!-- Editorial Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://tile.openstreetmap.org">
+
+  <!-- Leaflet Stylesheet for OpenStreetMap (non-blocking initial render) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" media="print" onload="this.media='all'" crossorigin="">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""></noscript>
+
+  <!-- Primary Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to documentary content</a>
+
+  <!-- Top Reading Progress Line -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Primary Header Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Rebala Village CSP Home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2.5C12 2.5 5.5 10.2 5.5 15a6.5 6.5 0 0 0 13 0c0-4.8-6.5-12.5-6.5-12.5Z" />
+            <path d="M8.5 15.5c.8 1.5 2.2 2.3 3.5 2.3" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__title">Rebala Field Monograph</span>
+          <span class="brand__meta">CSP · SVCN AI</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary documentary sections">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link is-active" data-section="home" aria-current="location">Home</a></li>
+          <li><a href="#overview" class="nav-link" data-section="overview">Overview</a></li>
+          <li><a href="#journey" class="nav-link" data-section="journey">Fieldwork Journey</a></li>
+          <li><a href="#facilities" class="nav-link" data-section="facilities">Water Facilities</a></li>
+          <li><a href="#map-section" class="nav-link" data-section="map-section">Study Map</a></li>
+          <li><a href="#archive" class="nav-link" data-section="archive">Photo Archive</a></li>
+          <li><a href="#findings" class="nav-link" data-section="findings">Findings</a></li>
+          <li><a href="#team" class="nav-link" data-section="team">Team &amp; Credits</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-drawer"
+        aria-label="Toggle navigation menu">
+        <span class="menu-toggle__label">Menu</span>
+        <span class="menu-toggle__bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" hidden>
+      <div class="container mobile-drawer__inner">
+        <p class="mobile-drawer__caption">Documentary Chapters</p>
+        <ul class="mobile-nav-list">
+          <li><a href="#home" class="mobile-nav-link is-active" data-section="home" aria-current="location">00 · Opening
+              Plate</a></li>
+          <li><a href="#overview" class="mobile-nav-link" data-section="overview">01 · Overview, Study Area &amp;
+              Methodology</a></li>
+          <li><a href="#journey" class="mobile-nav-link" data-section="journey">02 · Our Fieldwork Journey (Weeks
+              1–8)</a></li>
+          <li><a href="#facilities" class="mobile-nav-link" data-section="facilities">03 · Water Facilities
+              Documentation</a></li>
+          <li><a href="#map-section" class="mobile-nav-link" data-section="map-section">04 · Interactive Study Area
+              Map</a></li>
+          <li><a href="#archive" class="mobile-nav-link" data-section="archive">05 · Photo Documentary Archive</a></li>
+          <li><a href="#findings" class="mobile-nav-link" data-section="findings">06 · Findings, Recommendations &amp;
+              Schemes</a></li>
+          <li><a href="#team" class="mobile-nav-link" data-section="team">07 · Team, Verification &amp; Conclusion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =========================================================
+         HERO: OPENING DOCUMENTARY PLATE
+         ========================================================= -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy" id="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Rebala Village — Community Service Project
+          </p>
+
+          <h1 class="hero__title" id="hero-title">
+            Water Facilities
+            <span class="hero__title-amp">and</span>
+            Drinking Water Availability
+          </h1>
+
+          <p class="hero__lead">
+            An eight-week field documentary examining public drinking water infrastructure, elevated storage systems,
+            residential groundwater reliance, and community stewardship across Rebala Village.
+          </p>
+
+          <dl class="hero__meta-strip">
+            <div class="meta-item">
+              <dt>Study Location</dt>
+              <dd>Rebala Village, Buchireddypalem Mandal, SPSR Nellore Dt., AP</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Institution &amp; Dept.</dt>
+              <dd>Sree Venkateswara College of Engineering · Dept. of Artificial Intelligence</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Academic Cohort</dt>
+              <dd>B.Tech (2024–2028 Batch) | III Year during fieldwork</dd>
+            </div>
+            <div class="meta-item">
+              <dt>Fieldwork Record</dt>
+              <dd>Commenced 01 June 2026 · 8 Weekly Chapters documented</dd>
+            </div>
+          </dl>
+
+          <div class="verification-callout" role="note" aria-label="Date confirmation notice">
+            <span class="verification-callout__tag">Verification Notice</span>
+            <p>
+              Weekly fieldwork logs span <strong>01 June – 25 July 2026</strong>, whereas the Program Book cover sheet
+              records <strong>12 July 2026</strong> as the end date. Overall project end date awaits final author
+              confirmation.
+            </p>
+          </div>
+
+          <div class="hero__actions">
+            <a href="#journey" class="btn btn--primary">Explore 8-Week Journey</a>
+            <a href="#facilities" class="btn btn--ghost">Inspect Water Facilities</a>
+          </div>
+        </div>
+
+        <figure class="hero__visual" id="hero-visual">
+          <div class="hero-plate" id="hero-plate-mount">
+            <div class="hero-plate__placeholder">
+              <div class="hero-plate__header">
+                <span class="mono-label">FIELD PLATE 00 · MONOGRAPH COVER</span>
+                <span class="mono-label">REBALA VILLAGE CSP</span>
+              </div>
+
+              <div class="hero-plate__diagram" aria-hidden="true">
+                <svg viewBox="0 0 420 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Hydrological contour lines -->
+                  <path d="M20 265 C90 245, 140 285, 210 268 C280 250, 330 278, 400 258" stroke="currentColor"
+                    stroke-opacity="0.16" stroke-width="1" />
+                  <path d="M20 285 C105 268, 160 302, 225 286 C295 268, 345 294, 400 278" stroke="currentColor"
+                    stroke-opacity="0.22" stroke-width="1" />
+                  <path d="M20 305 C115 290, 175 318, 240 304 C310 288, 350 310, 400 298" stroke="currentColor"
+                    stroke-opacity="0.3" stroke-width="1.2" />
+                  <!-- Elevated reservoir architectural elevation -->
+                  <line x1="90" y1="242" x2="330" y2="242" stroke="currentColor" stroke-opacity="0.35"
+                    stroke-width="1.2" />
+                  <rect x="148" y="64" width="124" height="58" rx="2" stroke="currentColor" stroke-width="1.5" />
+                  <line x1="140" y1="122" x2="280" y2="122" stroke="currentColor" stroke-width="1.5" />
+                  <line x1="162" y1="122" x2="156" y2="242" stroke="currentColor" stroke-width="1.4" />
+                  <line x1="258" y1="122" x2="264" y2="242" stroke="currentColor" stroke-width="1.4" />
+                  <line x1="210" y1="122" x2="210" y2="242" stroke="currentColor" stroke-opacity="0.65"
+                    stroke-width="1.2" stroke-dasharray="4 4" />
+                  <line x1="160" y1="162" x2="260" y2="162" stroke="currentColor" stroke-opacity="0.45"
+                    stroke-width="1.1" />
+                  <line x1="158" y1="202" x2="262" y2="202" stroke="currentColor" stroke-opacity="0.45"
+                    stroke-width="1.1" />
+                  <!-- Spiral stair & riser motif -->
+                  <path
+                    d="M148 74 C126 88, 126 106, 148 118 C126 134, 126 154, 148 168 C126 184, 126 206, 148 220 L148 242"
+                    stroke="currentColor" stroke-opacity="0.55" stroke-width="1.2" />
+                  <!-- Elevation dimension ticks -->
+                  <line x1="305" y1="64" x2="305" y2="242" stroke="currentColor" stroke-opacity="0.3" stroke-width="1"
+                    stroke-dasharray="2 3" />
+                  <circle cx="210" cy="40" r="10" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" />
+                  <circle cx="210" cy="40" r="2.5" fill="currentColor" fill-opacity="0.6" />
+                </svg>
+              </div>
+
+              <div class="hero-plate__footer">
+                <div>
+                  <p class="hero-plate__caption-title">Rebala Village Water Facilities</p>
+                  <p class="hero-plate__caption-sub">
+                    Community Service Project documentary archive of village drinking water sources and storage
+                    infrastructure.
+                  </p>
+                </div>
+                <span class="mono-label">REBALA · AP 524305</span>
+              </div>
+            </div>
+          </div>
+          <figcaption class="hero__figcaption" id="hero-figcaption" hidden></figcaption>
+        </figure>
+      </div>
+
+      <div class="container hero__scroll-cue">
+        <a href="#overview" class="scroll-indicator" aria-label="Scroll down to overview">
+          <span class="scroll-indicator__line" aria-hidden="true"></span>
+          <span class="scroll-indicator__text">Scroll to enter fieldwork documentary</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CHAPTER 01: PROJECT GENESIS, STUDY AREA, OBJECTIVES & METHODOLOGY
+         ========================================================= -->
+    <section class="section section--stone" id="overview" aria-labelledby="overview-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-index">Chapter 01</span>
+          <h2 class="section-title" id="overview-heading">Genesis, Study Area &amp; Field Methodology</h2>
+          <p class="section-subtitle">
+            Connecting academic observation with rural community reality in Rebala Village through structured site
+            documentation and resident interaction.
+          </p>
+        </header>
+
+        <div class="editorial-split reveal">
+          <article class="editorial-column">
+            <h3 class="editorial-h3">Project Genesis &amp; Need for the Study</h3>
+            <p>
+              Drinking water is fundamental to daily health, domestic sanitation, and rural community resilience. In
+              village settlements, households rely on an interwoven network of public facilities—mineral water plants,
+              elevated storage tanks, public standposts, hand pumps, and groundwater borewells—whose day-to-day
+              accessibility depends on physical upkeep and responsible community stewardship.
+            </p>
+            <p>
+              Field observations, photographs, and location notes collected across separate village visits remain
+              fragmented without a unified record. This Community Service Project was initiated to observe Rebala
+              Village’s existing water infrastructure firsthand, document facility conditions accurately, foster
+              water-conservation awareness among school students, and organize all verified findings into an enduring
+              digital monograph.
+            </p>
+          </article>
+
+          <article class="editorial-column">
+            <h3 class="editorial-h3">Study Area: Rebala Village</h3>
+            <p>
+              Fieldwork was conducted across residential streets, public utility premises, an educational campus, and
+              administrative offices in <strong>Rebala Village</strong>, located in <strong>Buchireddypalem Mandal, SPSR
+                Nellore District, Andhra Pradesh</strong> (within the Rebala Gram Sachivalayam, Swarna Rebala 1 &amp; 2
+              jurisdiction).
+            </p>
+            <dl class="fact-list">
+              <div class="fact-list__row">
+                <dt>Local Administration</dt>
+                <dd>Rebala Gram Sachivalayam (Swarna Rebala 1 &amp; 2)</dd>
+              </div>
+              <div class="fact-list__row">
+                <dt>Primary Study Focus</dt>
+                <dd>Public water availability, storage structures, community taps, pumping units, and household access
+                </dd>
+              </div>
+              <div class="fact-list__row">
+                <dt>Water Sources Documented</dt>
+                <dd>RWSS RO mineral plant, elevated OHT, standposts, washing platform, hand pumps, pumping installation,
+                  borewells</dd>
+              </div>
+              <div class="fact-list__row">
+                <dt>Evidence Scope</dt>
+                <dd>Direct physical observation, resident &amp; student interactions, field photography (no lab testing
+                  conducted)</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+
+        <!-- Objectives Ledger -->
+        <div class="subsection reveal">
+          <div class="subsection-head">
+            <span class="mono-label">01.A · Project Mandate</span>
+            <h3 class="editorial-h3">Core Project Objectives</h3>
+          </div>
+          <ol class="ledger-list">
+            <li class="ledger-item">
+              <span class="ledger-item__num">01</span>
+              <div>
+                <h4>Infrastructure Inventory &amp; Accessibility</h4>
+                <p>Observe and document existing water sources, elevated storage reservoirs, public taps, hand pumps,
+                  and pumping facilities across Rebala Village.</p>
+              </div>
+            </li>
+            <li class="ledger-item">
+              <span class="ledger-item__num">02</span>
+              <div>
+                <h4>Administrative &amp; Community Engagement</h4>
+                <p>Coordinate with Gram Sachivalayam authorities and interact directly with local residents and plant
+                  operators regarding everyday water access.</p>
+              </div>
+            </li>
+            <li class="ledger-item">
+              <span class="ledger-item__num">03</span>
+              <div>
+                <h4>Youth &amp; School Water Awareness</h4>
+                <p>Conduct interactive sessions with local school students on clean water handling, surrounding facility
+                  sanitation, and preventing wastage.</p>
+              </div>
+            </li>
+            <li class="ledger-item">
+              <span class="ledger-item__num">04</span>
+              <div>
+                <h4>Photographic &amp; Spatial Documentation</h4>
+                <p>Capture authentic fieldwork photographs and organize weekly observations cleanly for transparent
+                  academic review.</p>
+              </div>
+            </li>
+            <li class="ledger-item">
+              <span class="ledger-item__num">05</span>
+              <div>
+                <h4>Evidence-Based Digital Synthesis</h4>
+                <p>Present verified field observations alongside clearly separated unconfirmed technical items on an
+                  accessible static documentation platform.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Interactive 5-Stage Methodology Sequence -->
+        <div class="subsection reveal">
+          <div class="subsection-head">
+            <span class="mono-label">01.B · Research Workflow</span>
+            <h3 class="editorial-h3">Five-Stage Fieldwork Methodology</h3>
+          </div>
+          <div class="methodology-tabs" role="tablist" aria-label="Methodology stages">
+            <button type="button" class="method-tab is-active" id="method-tab-0" role="tab" aria-selected="true"
+              aria-controls="methodology-panel" tabindex="0" data-method="0">
+              <span class="method-tab__step">Stage 01</span>
+              <span class="method-tab__title">Coordination</span>
+            </button>
+            <button type="button" class="method-tab" id="method-tab-1" role="tab" aria-selected="false"
+              aria-controls="methodology-panel" tabindex="-1" data-method="1">
+              <span class="method-tab__step">Stage 02</span>
+              <span class="method-tab__title">Field Audits</span>
+            </button>
+            <button type="button" class="method-tab" id="method-tab-2" role="tab" aria-selected="false"
+              aria-controls="methodology-panel" tabindex="-1" data-method="2">
+              <span class="method-tab__step">Stage 03</span>
+              <span class="method-tab__title">Community &amp; School</span>
+            </button>
+            <button type="button" class="method-tab" id="method-tab-3" role="tab" aria-selected="false"
+              aria-controls="methodology-panel" tabindex="-1" data-method="3">
+              <span class="method-tab__step">Stage 04</span>
+              <span class="method-tab__title">Visual Logging</span>
+            </button>
+            <button type="button" class="method-tab" id="method-tab-4" role="tab" aria-selected="false"
+              aria-controls="methodology-panel" tabindex="-1" data-method="4">
+              <span class="method-tab__step">Stage 05</span>
+              <span class="method-tab__title">Digital Synthesis</span>
+            </button>
+          </div>
+          <div class="methodology-panel" id="methodology-panel" role="tabpanel" aria-labelledby="method-tab-0"
+            aria-live="polite">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CHAPTER 02: OUR FIELDWORK JOURNEY (WEEKS 1–8)
+         ========================================================= -->
+    <section class="section" id="journey" aria-labelledby="journey-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-index">Chapter 02</span>
+          <h2 class="section-title" id="journey-heading">Our Fieldwork Journey</h2>
+          <p class="section-subtitle">
+            Eight documented chapters tracing our progression from Gram Sachivalayam permissions and school outreach to
+            physical facility inspections and digital synthesis.
+          </p>
+        </header>
+
+        <div class="journey-layout">
+          <!-- Sticky Documentary Rail -->
+          <aside class="journey-rail" aria-label="Week-by-week navigation">
+            <p class="journey-rail__heading">Timeline Chapters</p>
+            <nav>
+              <ol class="week-nav" id="week-nav">
+                <li><a href="#week-1" class="week-nav__link is-active" data-week="week-1"><span
+                      class="week-nav__num">W1</span><span>01–06 Jun · Survey &amp; RO Plant</span></a></li>
+                <li><a href="#week-2" class="week-nav__link" data-week="week-2"><span
+                      class="week-nav__num">W2</span><span>08–13 Jun · School Awareness</span></a></li>
+                <li><a href="#week-3" class="week-nav__link" data-week="week-3"><span
+                      class="week-nav__num">W3</span><span>15–20 Jun · Overhead Tank</span></a></li>
+                <li><a href="#week-4" class="week-nav__link" data-week="week-4"><span
+                      class="week-nav__num">W4</span><span>22–27 Jun · Public Taps</span></a></li>
+                <li><a href="#week-5" class="week-nav__link" data-week="week-5"><span
+                      class="week-nav__num">W5</span><span>29 Jun–04 Jul · Hand Pumps</span></a></li>
+                <li><a href="#week-6" class="week-nav__link" data-week="week-6"><span
+                      class="week-nav__num">W6</span><span>06–11 Jul · Pumping Facility</span></a></li>
+                <li><a href="#week-7" class="week-nav__link" data-week="week-7"><span
+                      class="week-nav__num">W7</span><span>13–25 Jul* · System Design</span></a></li>
+                <li><a href="#week-8" class="week-nav__link" data-week="week-8"><span
+                      class="week-nav__num">W8</span><span>13–25 Jul* · Digital Monograph</span></a></li>
+              </ol>
+            </nav>
+            <p class="journey-rail__footnote">
+              * Weeks 7 and 8 are documented together in the CSP report (13–25 July 2026) under the Mini Project Report
+              and separated here cleanly for organized photography.
+            </p>
+          </aside>
+
+          <!-- Eight Documentary Chapters -->
+          <div class="journey-chapters">
+            <!-- WEEK 1 -->
+            <article class="week-chapter reveal" id="week-1">
+              <div class="week-chapter__top">
+                <span class="week-chapter__num">01</span>
+                <div class="week-chapter__titles">
+                  <div class="week-chapter__meta">
+                    <span class="mono-pill">Week 1</span>
+                    <span class="mono-date">01 June 2026 — 06 June 2026</span>
+                  </div>
+                  <h3>Preliminary Study and Survey of Water Facilities &amp; Drinking Water Availability</h3>
+                  <p class="week-chapter__objective">
+                    <strong>Weekly Objective:</strong> Establish project guidelines, coordinate with Rebala Gram
+                    Sachivalayam authorities, interact with residents on local sources, and conduct an initial visit to
+                    the Mineral Water Plant.
+                  </p>
+                </div>
+              </div>
+
+              <div class="week-chapter__body">
+                <p>
+                  The opening week grounded our fieldwork in administrative legitimacy and direct local context. After
+                  reviewing APSCHE Community Service Project guidelines and selecting drinking water availability as our
+                  focus (Day 1), we visited the <strong>Rebala Gram Sachivalayam</strong> to brief officials on our
+                  objectives and coordination needs (Day 2). Across Days 3 and 4, we walked nearby village areas, spoke
+                  with residents about their primary water points, and visited a local <strong>Mineral Water
+                    Plant</strong> on Day 5 to observe water container-filling operations and speak with the facility
+                  staff before organizing initial field records on Day 6.
+                </p>
+
+                <div class="outcome-quote">
+                  <span class="outcome-quote__label">Core Week 1 Outcome</span>
+                  <p>Understood the value of local administrative coordination, firsthand resident interviews, and
+                    systematic documentation when surveying village water infrastructure.</p>
+                </div>
+
+                <details class="daily-ledger">
+                  <summary class="daily-ledger__summary">
+                    <span>Inspect Daily Activity Log · Days 1–6 (01–06 June 2026)</span>
+                    <span class="daily-ledger__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="daily-ledger__content">
+                    <table class="ledger-table">
+                      <thead>
+                        <tr>
+                          <th>Day &amp; Date</th>
+                          <th>Documented Field Activity</th>
+                          <th>Learning Outcome</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Day 1</strong><span>01-06-2026</span></td>
+                          <td>Studied CSP guidelines and planned project activities on Water Facilities and Drinking
+                            Water Availability.</td>
+                          <td>Understood project objectives and why studying village drinking water facilities matters.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 2</strong><span>02-06-2026</span></td>
+                          <td>Visited Rebala Gram Sachivalayam, explained the study purpose, and discussed permission
+                            and field coordination.</td>
+                          <td>Learned the importance of coordinating with local authorities prior to community studies.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 3</strong><span>03-06-2026</span></td>
+                          <td>Visited nearby areas and interacted with local residents regarding available drinking
+                            water sources and facilities.</td>
+                          <td>Understood the importance of collecting information directly from residents.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 4</strong><span>04-06-2026</span></td>
+                          <td>Continued observing water facilities in the community and documenting accessibility and
+                            usage conditions.</td>
+                          <td>Learned how direct observation clarifies facility availability and everyday access.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 5</strong><span>05-06-2026</span></td>
+                          <td>Visited a Mineral Water Plant in Rebala Village, interacted with a person at the facility,
+                            and observed water container filling.</td>
+                          <td>Gained practical insight into a local mineral water plant serving community drinking
+                            needs.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 6</strong><span>06-06-2026</span></td>
+                          <td>Reviewed collected information and photographs, organizing observations for ongoing study.
+                          </td>
+                          <td>Learned systematic field documentation and record organization for reporting.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <div class="week-gallery" id="week-gallery-week1"></div>
+              </div>
+            </article>
+
+            <!-- WEEK 2 -->
+            <article class="week-chapter reveal" id="week-2">
+              <div class="week-chapter__top">
+                <span class="week-chapter__num">02</span>
+                <div class="week-chapter__titles">
+                  <div class="week-chapter__meta">
+                    <span class="mono-pill">Week 2</span>
+                    <span class="mono-date">08 June 2026 — 13 June 2026</span>
+                  </div>
+                  <h3>School Awareness Programme on Water Facilities &amp; Conservation</h3>
+                  <p class="week-chapter__objective">
+                    <strong>Weekly Objective:</strong> Plan and conduct an interactive community awareness programme
+                    with local school students on drinking water value, public facility cleanliness, and responsible
+                    daily usage.
+                  </p>
+                </div>
+              </div>
+
+              <div class="week-chapter__body">
+                <p>
+                  Week 2 shifted focus toward community dialogue with younger generations. Following structured session
+                  planning on Day 1, we visited <strong>Adarsha High School, Rebala (ఆదర్శ ఉన్నత పాఠశాల)</strong> (Day
+                  2) to introduce our project and engage students in conversations around everyday drinking water access
+                  (Day 3). Subsequent sessions focused on caring for shared water facilities (Day 4), keeping water
+                  containers and surroundings clean, and avoiding daily water wastage (Day 5), concluding with
+                  documentation review on Day 6.
+                </p>
+
+                <div class="outcome-quote">
+                  <span class="outcome-quote__label">Core Week 2 Outcome</span>
+                  <p>Saw how interactive discussions encourage school students to share local observations and adopt
+                    responsible water-conservation habits at home and in public spaces.</p>
+                </div>
+
+                <details class="daily-ledger">
+                  <summary class="daily-ledger__summary">
+                    <span>Inspect Daily Activity Log · Days 1–6 (08–13 June 2026)</span>
+                    <span class="daily-ledger__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="daily-ledger__content">
+                    <table class="ledger-table">
+                      <thead>
+                        <tr>
+                          <th>Day &amp; Date</th>
+                          <th>Documented Field Activity</th>
+                          <th>Learning Outcome</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Day 1</strong><span>08-06-2026</span></td>
+                          <td>Planned awareness activities and prepared discussion points on drinking water usage and
+                            conservation for school students.</td>
+                          <td>Understood how to structure and plan an educational community awareness activity.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 2</strong><span>09-06-2026</span></td>
+                          <td>Visited Adarsha High School, Rebala (ఆదర్శ ఉన్నత పాఠశాల), introduced the CSP topic, and
+                            interacted with students on drinking water importance.</td>
+                          <td>Learned how to communicate project aims effectively to school students.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 3</strong><span>10-06-2026</span></td>
+                          <td>Continued student interactions and invited students to share their understanding and
+                            everyday water-use experiences.</td>
+                          <td>Recognized the value of active student participation in community discussions.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 4</strong><span>11-06-2026</span></td>
+                          <td>Explained the role of public water facilities and emphasized proper usage and maintenance
+                            of shared resources.</td>
+                          <td>Learned that responsible water stewardship habits are best fostered from an early age.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 5</strong><span>12-06-2026</span></td>
+                          <td>Discussed preventing water wastage and maintaining cleanliness around water containers and
+                            public water facilities.</td>
+                          <td>Gained experience communicating practical conservation practices to younger audiences.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 6</strong><span>13-06-2026</span></td>
+                          <td>Reviewed and summarized discussion takeaways and student observations for project
+                            reporting.</td>
+                          <td>Strengthened documentation and synthesis of outreach outcomes.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <div class="week-gallery" id="week-gallery-week2"></div>
+              </div>
+            </article>
+
+            <!-- WEEK 3 -->
+            <article class="week-chapter reveal" id="week-3">
+              <div class="week-chapter__top">
+                <span class="week-chapter__num">03</span>
+                <div class="week-chapter__titles">
+                  <div class="week-chapter__meta">
+                    <span class="mono-pill">Week 3</span>
+                    <span class="mono-date">15 June 2026 — 20 June 2026</span>
+                  </div>
+                  <h3>Study and Observation of an Overhead Water Storage Tank Facility</h3>
+                  <p class="week-chapter__objective">
+                    <strong>Weekly Objective:</strong> Inspect the elevated overhead water storage tank structure in
+                    Rebala Village and understand how elevated storage supports community distribution.
+                  </p>
+                </div>
+              </div>
+
+              <div class="week-chapter__body">
+                <p>
+                  During Week 3, our fieldwork examined central water storage architecture. Visiting the
+                  <strong>overhead water storage reservoir</strong> on Days 1–2, we observed the elevated tank body, its
+                  reinforced supporting column frame, external spiral access staircase, and fenced compound premises.
+                  Days 3–5 explored how elevated storage facilitates area-wide water distribution and why ongoing
+                  structural maintenance is essential, closing with record compilation on Day 6.
+                </p>
+
+                <div class="outcome-quote">
+                  <span class="outcome-quote__label">Core Week 3 Outcome</span>
+                  <p>Understood the physical layout of elevated village storage infrastructure and the direct link
+                    between routine structural maintenance and reliable water distribution.</p>
+                </div>
+
+                <details class="daily-ledger">
+                  <summary class="daily-ledger__summary">
+                    <span>Inspect Daily Activity Log · Days 1–6 (15–20 June 2026)</span>
+                    <span class="daily-ledger__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="daily-ledger__content">
+                    <table class="ledger-table">
+                      <thead>
+                        <tr>
+                          <th>Day &amp; Date</th>
+                          <th>Documented Field Activity</th>
+                          <th>Learning Outcome</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Day 1</strong><span>15-06-2026</span></td>
+                          <td>Visited an overhead water storage tank facility in Rebala Village and observed the
+                            elevated tank and surrounding premises.</td>
+                          <td>Understood the role of overhead tanks in community water management via direct
+                            observation.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 2</strong><span>16-06-2026</span></td>
+                          <td>Examined the supporting column structure, elevated tank positioning, and external access
+                            staircase.</td>
+                          <td>Learned the basic structural arrangement of elevated community water storage tanks.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 3</strong><span>17-06-2026</span></td>
+                          <td>Studied the purpose of storing water at elevation to support distribution across community
+                            zones.</td>
+                          <td>Understood how elevated storage infrastructure supports local distribution networks.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 4</strong><span>18-06-2026</span></td>
+                          <td>Recorded visible features of the overhead tank and surrounding site for field
+                            documentation.</td>
+                          <td>Practiced accurate field recording of public water infrastructure.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 5</strong><span>19-06-2026</span></td>
+                          <td>Reviewed observations and discussed routine maintenance requirements for overhead storage
+                            structures.</td>
+                          <td>Recognized the necessity of preventive maintenance and shared asset stewardship.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 6</strong><span>20-06-2026</span></td>
+                          <td>Organized photographs and field notes to prepare for the next survey phase.</td>
+                          <td>Improved teamwork and structured field record preparation.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <div class="week-gallery" id="week-gallery-week3"></div>
+              </div>
+            </article>
+
+            <!-- WEEK 4 -->
+            <article class="week-chapter reveal" id="week-4">
+              <div class="week-chapter__top">
+                <span class="week-chapter__num">04</span>
+                <div class="week-chapter__titles">
+                  <div class="week-chapter__meta">
+                    <span class="mono-pill">Week 4</span>
+                    <span class="mono-date">22 June 2026 — 27 June 2026</span>
+                  </div>
+                  <h3>Observation and Study of Public Water Facilities</h3>
+                  <p class="week-chapter__objective">
+                    <strong>Weekly Objective:</strong> Observe public water taps, indoor pipeline-fed tap assemblies,
+                    and shared multi-tap washing platforms across Rebala Village.
+                  </p>
+                </div>
+              </div>
+
+              <div class="week-chapter__body">
+                <p>
+                  Week 4 traced water from storage down to community access points. We inspected general public tap
+                  arrangements (Day 1), an <strong>indoor multi-tap facility</strong> where wall-mounted taps drew from
+                  a storage tank via a common pipeline (Day 2), and an exterior <strong>long washing platform with
+                    multiple water outlets</strong> serving simultaneous community use (Day 3). On Days 4–6, we compared
+                  outlet layouts, discussed platform cleanliness and tap maintenance, and compiled indoor and outdoor
+                  documentation.
+                </p>
+
+                <div class="outcome-quote">
+                  <span class="outcome-quote__label">Core Week 4 Outcome</span>
+                  <p>Improved observation skills and understood the different pipeline and outlet arrangements used in
+                    public water facilities.</p>
+                </div>
+
+                <details class="daily-ledger">
+                  <summary class="daily-ledger__summary">
+                    <span>Inspect Daily Activity Log · Days 1–6 (22–27 June 2026)</span>
+                    <span class="daily-ledger__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="daily-ledger__content">
+                    <table class="ledger-table">
+                      <thead>
+                        <tr>
+                          <th>Day &amp; Date</th>
+                          <th>Documented Field Activity</th>
+                          <th>Learning Outcome</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Day 1</strong><span>22-06-2026</span></td>
+                          <td>Visited a public water facility in the village and observed available water taps and their
+                            layout.</td>
+                          <td>Understood how public tap stations provide accessible community water points.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 2</strong><span>23-06-2026</span></td>
+                          <td>Observed an indoor tap room with multiple wall taps linked through a common pipeline to a
+                            storage tank.</td>
+                          <td>Learned how a local storage tank connects through a common pipeline to multi-tap outlets.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 3</strong><span>24-06-2026</span></td>
+                          <td>Visited another shared water-use facility featuring a long washing platform with multiple
+                            outlets.</td>
+                          <td>Understood how shared multi-outlet platforms serve multiple users at one site.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 4</strong><span>25-06-2026</span></td>
+                          <td>Continued inspecting water outlets and comparing visible pipeline and tap arrangements
+                            across facilities.</td>
+                          <td>Improved observation skills and understood the different pipeline and outlet arrangements
+                            used in public water facilities.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 5</strong><span>26-06-2026</span></td>
+                          <td>Reviewed observed facilities and discussed tap maintenance, surrounding cleanliness, and
+                            avoiding wastage.</td>
+                          <td>Understood the importance of shared cleanliness and regular maintenance at common water
+                            points.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 6</strong><span>27-06-2026</span></td>
+                          <td>Organized photographs and field notes across indoor and outdoor public water points.</td>
+                          <td>Strengthened comparative documentation across multiple facility configurations.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <div class="week-gallery" id="week-gallery-week4"></div>
+              </div>
+            </article>
+
+            <!-- WEEK 5 -->
+            <article class="week-chapter reveal" id="week-5">
+              <div class="week-chapter__top">
+                <span class="week-chapter__num">05</span>
+                <div class="week-chapter__titles">
+                  <div class="week-chapter__meta">
+                    <span class="mono-pill">Week 5</span>
+                    <span class="mono-date">29 June 2026 — 04 July 2026</span>
+                  </div>
+                  <h3>Field Survey and Interaction with Residents Regarding Water Facilities</h3>
+                  <p class="week-chapter__objective">
+                    <strong>Weekly Objective:</strong> Inspect outdoor discharge points and residential hand pumps while
+                    gathering direct feedback from village residents on water reliance and accessibility.
+                  </p>
+                </div>
+              </div>
+
+              <div class="week-chapter__body">
+                <p>
+                  Week 5 moved directly into residential neighborhoods and open discharge points. As documented in the
+                  weekly activity log, Day 1 recorded an <strong>outdoor pipe outlet discharging water into an adjacent
+                    channel</strong>, followed on Day 2 by inspecting a <strong>residential hand pump facility</strong>
+                  and interviewing an elderly resident regarding its daily importance. Days 3–6 extended community
+                  feedback gathering across nearby households, assessing surrounding site accessibility, and organizing
+                  survey observations.
+                </p>
+
+                <div class="outcome-quote">
+                  <span class="outcome-quote__label">Core Week 5 Outcome</span>
+                  <p>Recognized how direct conversations with long-time residents reveal practical dependency on
+                    neighborhood hand pumps and localized access gaps.</p>
+                </div>
+
+                <details class="daily-ledger">
+                  <summary class="daily-ledger__summary">
+                    <span>Inspect Daily Activity Log · Days 1–6 (29 June – 04 July 2026)</span>
+                    <span class="daily-ledger__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="daily-ledger__content">
+                    <table class="ledger-table">
+                      <thead>
+                        <tr>
+                          <th>Day &amp; Date</th>
+                          <th>Documented Field Activity</th>
+                          <th>Learning Outcome</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Day 1</strong><span>29-06-2026</span></td>
+                          <td>Visited an outdoor water facility and observed a pipe outlet discharging water into a
+                            nearby channel.</td>
+                          <td>Understood the importance of observing water outlets and discharge flow direction.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 2</strong><span>30-06-2026</span></td>
+                          <td>Visited a residential area, observed a hand pump facility, and interacted with an elderly
+                            resident regarding its usage.</td>
+                          <td>Learned how direct resident dialogue illuminates neighborhood drinking water reliance.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 3</strong><span>01-07-2026</span></td>
+                          <td>Continued gathering community feedback on household water sources and daily experiences
+                            with available facilities.</td>
+                          <td>Understood how resident experiences identify real community water requirements.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 4</strong><span>02-07-2026</span></td>
+                          <td>Observed surrounding site areas of water points and recorded arrangement and accessibility
+                            details.</td>
+                          <td>Learned how spatial site audits reveal facility usability and physical condition.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 5</strong><span>03-07-2026</span></td>
+                          <td>Reviewed resident feedback and organized notes on hand pumps and outdoor outlets.</td>
+                          <td>Reinforced consistent record-keeping across community survey stops.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 6</strong><span>04-07-2026</span></td>
+                          <td>Summarized survey findings and organized photographs collected across residential visits.
+                          </td>
+                          <td>Developed clearer comparative understanding of neighborhood water access.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <div class="week-gallery" id="week-gallery-week5"></div>
+              </div>
+            </article>
+
+            <!-- WEEK 6 -->
+            <article class="week-chapter reveal" id="week-6">
+              <div class="week-chapter__top">
+                <span class="week-chapter__num">06</span>
+                <div class="week-chapter__titles">
+                  <div class="week-chapter__meta">
+                    <span class="mono-pill">Week 6</span>
+                    <span class="mono-date">06 July 2026 — 11 July 2026</span>
+                  </div>
+                  <h3>Study and Observation of Water-Pumping Facilities</h3>
+                  <p class="week-chapter__objective">
+                    <strong>Weekly Objective:</strong> Inspect an outdoor water-pumping installation in Rebala Village,
+                    gather additional household perspectives, and synthesize observations across storage, pumping, and
+                    tap points.
+                  </p>
+                </div>
+              </div>
+
+              <div class="week-chapter__body">
+                <p>
+                  In the sixth week of fieldwork, we examined an <strong>outdoor water-pumping
+                    installation</strong>—noting its physical structure, covered upper housing, connected outlet pipe,
+                  and surrounding premises (Days 1–2). On Days 3–4, we spoke further with residents about nearby water
+                  availability and usage before conducting a holistic cross-review (Day 5) connecting public taps,
+                  elevated storage tanks, and pumping hardware, closing with report preparation notes on Day 6.
+                </p>
+
+                <div class="outcome-quote">
+                  <span class="outcome-quote__label">Core Week 6 Outcome</span>
+                  <p>Connected individual village assets—pumping installations, elevated storage, and public taps—into
+                    an integrated understanding of community water delivery.</p>
+                </div>
+
+                <details class="daily-ledger">
+                  <summary class="daily-ledger__summary">
+                    <span>Inspect Daily Activity Log · Days 1–6 (06–11 July 2026)</span>
+                    <span class="daily-ledger__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="daily-ledger__content">
+                    <table class="ledger-table">
+                      <thead>
+                        <tr>
+                          <th>Day &amp; Date</th>
+                          <th>Documented Field Activity</th>
+                          <th>Learning Outcome</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Day 1</strong><span>06-07-2026</span></td>
+                          <td>Visited an outdoor water-pumping installation and observed its covered upper section and
+                            connected outlet pipe.</td>
+                          <td>Gained practical exposure to water-pumping installations in rural infrastructure.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 2</strong><span>07-07-2026</span></td>
+                          <td>Continued inspecting visible pumping unit components, outlet pipe configuration, and site
+                            surroundings.</td>
+                          <td>Learned the importance of examining mechanical and structural water-transfer elements.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 3</strong><span>08-07-2026</span></td>
+                          <td>Interacted with local residents to understand household water sources and daily
+                            availability.</td>
+                          <td>Confirmed how resident feedback anchors infrastructure assessments in lived needs.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 4</strong><span>09-07-2026</span></td>
+                          <td>Gathered supplemental usage and accessibility details and discussed public infrastructure
+                            management.</td>
+                          <td>Understood the value of multi-location information gathering across the village.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 5</strong><span>10-07-2026</span></td>
+                          <td>Reviewed previous observations across public taps, storage tanks, and pumping
+                            installations together.</td>
+                          <td>Synthesized the interdependent roles of pumping, storage, and distribution infrastructure.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Day 6</strong><span>11-07-2026</span></td>
+                          <td>Organized photographs and field summaries in preparation for project documentation and
+                            digital synthesis.</td>
+                          <td>Strengthened documentation discipline ahead of the final project phase.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+
+                <div class="week-gallery" id="week-gallery-week6"></div>
+              </div>
+            </article>
+
+            <!-- WEEK 7 -->
+            <article class="week-chapter week-chapter--combined reveal" id="week-7">
+              <div class="week-chapter__top">
+                <span class="week-chapter__num">07</span>
+                <div class="week-chapter__titles">
+                  <div class="week-chapter__meta">
+                    <span class="mono-pill">Week 7</span>
+                    <span class="mono-date">Combined Report Period · 13 July – 25 July 2026</span>
+                  </div>
+                  <h3>Mini Project Phase: System Framing &amp; Modular Website Architecture</h3>
+                  <p class="week-chapter__objective">
+                    <strong>Documented Activity:</strong> Transitioning six weeks of scattered fieldwork notes and
+                    records into a structured digital system specification (Existing vs. Proposed System, Requirements,
+                    and Modular Architecture).
+                  </p>
+                </div>
+              </div>
+
+              <div class="week-chapter__body">
+                <div class="authenticity-note">
+                  <strong>Report Scope Note:</strong> In the source CSP report, Weeks 7 and 8 are documented jointly
+                  under the <em>Mini Project Report (13–25 July 2026)</em> without separate day-by-day activity tables.
+                  This dedicated Week 7 chapter presents authentic documented system-design activities without
+                  fabricating daily logs, paired with Week 7 screenshots of the completed website.
+                </div>
+
+                <p>
+                  Following field data collection in Weeks 1–6, the Mini Project phase addressed a clear practical
+                  problem: field visit notes, photographs, and location observations were dispersed and needed
+                  centralized digital organization. During this stage, hardware and software requirements were defined
+                  and the website’s modular architecture was laid out across dedicated modules—<em>Home, Genesis, Study
+                    Area &amp; Map, Overhead Reservoir, Water Facilities, Live Water Operations, GPS Ground-Truth, Photo
+                    Archive, Methodology, Findings, Recommendations, Team,</em> and <em>Conclusion</em>.
+                </p>
+
+                <div class="week-gallery" id="week-gallery-week7"></div>
+              </div>
+            </article>
+
+            <!-- WEEK 8 -->
+            <article class="week-chapter week-chapter--combined reveal" id="week-8">
+              <div class="week-chapter__top">
+                <span class="week-chapter__num">08</span>
+                <div class="week-chapter__titles">
+                  <div class="week-chapter__meta">
+                    <span class="mono-pill">Week 8</span>
+                    <span class="mono-date">Combined Report Period · 13 July – 25 July 2026</span>
+                  </div>
+                  <h3>Mini Project Phase: Digital Compilation, Documentation &amp; Project Synthesis</h3>
+                  <p class="week-chapter__objective">
+                    <strong>Documented Activity:</strong> Completing the digital water-facilities documentation
+                    platform, integrating methodology, findings, recommendations, and compiling the final academic CSP
+                    report.
+                  </p>
+                </div>
+              </div>
+
+              <div class="week-chapter__body">
+                <div class="authenticity-note">
+                  <strong>Report Scope Note:</strong> As with Week 7, individual daily entries for Week 8 are not
+                  separated in the source report’s <em>Mini Project Report (13–25 July 2026)</em>. No unrecorded daily
+                  activities have been invented; this chapter presents Week 8 visual documentation screenshots covering
+                  the interactive features and sections of the completed website.
+                </div>
+
+                <p>
+                  The concluding stage of the Mini Project brought fieldwork observations together with academic
+                  synthesis—documenting water storage and dispensing practices, separating verified observations from
+                  items requiring further confirmation, formulating practical maintenance and sanitation
+                  recommendations, organizing the complete visual documentary archive (11 original village fieldwork
+                  photographs across Weeks 1–6 alongside 9 completed-website documentation screenshots across Weeks 7
+                  and 8), and preparing the completed Community Service Project report and faculty guide review.
+                </p>
+
+                <div class="week-gallery" id="week-gallery-week8"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CHAPTER 03: WATER FACILITIES DOCUMENTATION
+         ========================================================= -->
+    <section class="section section--stone" id="facilities" aria-labelledby="facilities-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-index">Chapter 03</span>
+          <h2 class="section-title" id="facilities-heading">Water Facilities Documentation</h2>
+          <p class="section-subtitle">
+            Seven infrastructure categories documented across Rebala Village, strictly distinguishing direct field
+            observations from general technical roles and unverified metrics.
+          </p>
+        </header>
+
+        <div class="facilities-controls reveal">
+          <p class="facilities-controls__hint">Select a facility dossier below or inspect all profiles sequentially.</p>
+          <button type="button" class="btn btn--small btn--ghost" id="toggle-all-facilities" aria-pressed="false">
+            View All 7 Facilities Together
+          </button>
+        </div>
+
+        <div class="facilities-showcase reveal" id="facilities-showcase">
+          <nav class="facility-selector" aria-label="Documented water facilities">
+            <button type="button" class="facility-btn is-active" data-facility-id="rwss-plant" aria-pressed="true">
+              <span class="facility-btn__num">01</span>
+              <span class="facility-btn__name">Government RWSS Mineral Water Plant</span>
+              <span class="facility-btn__week">Week 1 · Live Operations</span>
+            </button>
+            <button type="button" class="facility-btn" data-facility-id="overhead-tank" aria-pressed="false">
+              <span class="facility-btn__num">02</span>
+              <span class="facility-btn__name">Overhead Water Storage Reservoir</span>
+              <span class="facility-btn__week">Week 3 · Elevated Storage</span>
+            </button>
+            <button type="button" class="facility-btn" data-facility-id="standposts" aria-pressed="false">
+              <span class="facility-btn__num">03</span>
+              <span class="facility-btn__name">Public Standposts &amp; Indoor Tap Room</span>
+              <span class="facility-btn__week">Week 4 · Distribution Points</span>
+            </button>
+            <button type="button" class="facility-btn" data-facility-id="washing-platform" aria-pressed="false">
+              <span class="facility-btn__num">04</span>
+              <span class="facility-btn__name">Multi-Tap Washing Facilities</span>
+              <span class="facility-btn__week">Week 4 · Common Utility</span>
+            </button>
+            <button type="button" class="facility-btn" data-facility-id="hand-pumps" aria-pressed="false">
+              <span class="facility-btn__num">05</span>
+              <span class="facility-btn__name">Hand Pumps</span>
+              <span class="facility-btn__week">Week 5 · Residential Source</span>
+            </button>
+            <button type="button" class="facility-btn" data-facility-id="pumping-installation" aria-pressed="false">
+              <span class="facility-btn__num">06</span>
+              <span class="facility-btn__name">Water-Pumping Installations</span>
+              <span class="facility-btn__week">Weeks 5–6 · Conveyance</span>
+            </button>
+            <button type="button" class="facility-btn" data-facility-id="borewells" aria-pressed="false">
+              <span class="facility-btn__num">07</span>
+              <span class="facility-btn__name">Borewells</span>
+              <span class="facility-btn__week">Overview · Groundwater</span>
+            </button>
+          </nav>
+
+          <div class="facility-dossier-panel" id="facility-dossier-panel" aria-live="polite">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CHAPTER 04: INTERACTIVE STUDY AREA MAP
+         ========================================================= -->
+    <section class="section" id="map-section" aria-labelledby="map-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-index">Chapter 04</span>
+          <h2 class="section-title" id="map-heading">Interactive Geographical Map</h2>
+          <p class="section-subtitle">
+            Rebala Village study-area orientation via OpenStreetMap and a transparent verification ledger for the six documented facility markers.
+          </p>
+        </header>
+
+        <div class="map-alert reveal" role="note">
+          <span class="map-alert__badge">GPS Integrity Notice</span>
+          <p>
+            Recovered from the published CSP dataset: <strong>1 GPS ground-truth waypoint</strong> marking the specific
+            Week 6 India Mark II hand-pump installation (<code>14.520941° N, 79.904295° E</code>, Plus Code
+            <code>Gwc4+43</code> — not every residential hand pump in the village) and <strong>5 approximate
+              field-referenced facility locations</strong> (~150–250 m uncertainty, kept distinctly marked as
+            approximate rather than GPS-verified). The dashed 650 m ring indicates an approximate map reference around
+            these facilities, not an official village boundary.
+          </p>
+        </div>
+
+        <div class="map-workspace reveal">
+          <div class="map-canvas-wrap">
+            <div id="rebala-map" class="map-canvas" role="region"
+              aria-label="Interactive map of Rebala Village study area"></div>
+            <div class="map-legend">
+              <span class="legend-item">
+                <span class="legend-swatch legend-swatch--zone"></span>
+                Approximate Map Reference (650 m · Not Official Boundary)
+              </span>
+              <span class="legend-item">
+                <span class="legend-swatch legend-swatch--verified"></span>
+                GPS-Verified Week 6 Hand Pump (1 pin)
+              </span>
+              <span class="legend-item">
+                <span class="legend-swatch legend-swatch--pending"></span>
+                Approximate Field Location (5 pins)
+              </span>
+            </div>
+          </div>
+
+          <aside class="map-registry" aria-label="Facility location verification registry">
+            <div class="map-registry__head">
+              <h3>Six Facility Slots</h3>
+              <div class="map-filters" role="group" aria-label="Filter map locations by verification status">
+                <button type="button" class="filter-chip is-active" data-map-filter="all" aria-pressed="true">All
+                  (6)</button>
+                <button type="button" class="filter-chip" data-map-filter="verified" aria-pressed="false">GPS Verified
+                  (1)</button>
+                <button type="button" class="filter-chip" data-map-filter="approximate" aria-pressed="false">Approximate
+                  (5)</button>
+              </div>
+            </div>
+
+            <ul class="location-list" id="map-location-list">
+              </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CHAPTER 05: PHOTO DOCUMENTARY ARCHIVE
+         ========================================================= -->
+    <section class="section section--stone" id="archive" aria-labelledby="archive-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-index">Chapter 05</span>
+          <h2 class="section-title" id="archive-heading">Photo Documentary Archive</h2>
+          <p class="section-subtitle">
+            20 visual items are published across the eight-week archive: 11 original village fieldwork photographs
+            (Weeks 1–6) and 9 completed-website documentation screenshots (Weeks 7–8).
+          </p>
+        </header>
+
+        <div class="archive-toolbar reveal">
+          <div class="archive-filters" role="group" aria-label="Filter photographs by week">
+            <button type="button" class="filter-chip is-active" data-archive-week="all" aria-pressed="true">All
+              Weeks</button>
+            <button type="button" class="filter-chip" data-archive-week="week1" aria-pressed="false">Week 1</button>
+            <button type="button" class="filter-chip" data-archive-week="week2" aria-pressed="false">Week 2</button>
+            <button type="button" class="filter-chip" data-archive-week="week3" aria-pressed="false">Week 3</button>
+            <button type="button" class="filter-chip" data-archive-week="week4" aria-pressed="false">Week 4</button>
+            <button type="button" class="filter-chip" data-archive-week="week5" aria-pressed="false">Week 5</button>
+            <button type="button" class="filter-chip" data-archive-week="week6" aria-pressed="false">Week 6</button>
+            <button type="button" class="filter-chip" data-archive-week="week7" aria-pressed="false">Week 7</button>
+            <button type="button" class="filter-chip" data-archive-week="week8" aria-pressed="false">Week 8</button>
+          </div>
+
+          <div class="archive-controls-right">
+            <label class="sr-only" for="archive-facility-filter">Filter by facility category</label>
+            <select id="archive-facility-filter" class="archive-select">
+              <option value="all">All Categories</option>
+              <option value="rwss-plant">RWSS Mineral Water Plant</option>
+              <option value="overhead-tank">Overhead Storage Reservoir</option>
+              <option value="standposts">Public Standposts &amp; Tap Room</option>
+              <option value="washing-platform">Multi-Tap Washing Platform</option>
+              <option value="hand-pumps">Hand Pumps</option>
+              <option value="pumping-installation">Water-Pumping Installations</option>
+              <option value="borewells">Borewells</option>
+              <option value="school-awareness">School Awareness</option>
+              <option value="sachivalayam">Gram Sachivalayam</option>
+              <option value="general">General Fieldwork</option>
+              <option value="website-documentation">Website Documentation</option>
+            </select>
+            <span class="archive-count mono-label" id="archive-count">0 registered</span>
+          </div>
+        </div>
+
+        <div id="archive-stage" class="archive-stage reveal">
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CHAPTER 06: FINDINGS, RECOMMENDATIONS, CONSERVATION & GOVT INITIATIVES
+         ========================================================= -->
+    <section class="section" id="findings" aria-labelledby="findings-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-index">Chapter 06</span>
+          <h2 class="section-title" id="findings-heading">Findings, Recommendations &amp; Water Stewardship</h2>
+          <p class="section-subtitle">
+            Separating verified field observations from unconfirmed items, alongside practical community recommendations
+            and national water initiatives referenced in the report.
+          </p>
+        </header>
+
+        <!-- Verified vs Requiring Confirmation -->
+        <div class="findings-split reveal">
+          <div class="findings-col findings-col--verified">
+            <span class="mono-pill">Verified Through Field Visits</span>
+            <h3>Direct Field Observations</h3>
+            <ul class="editorial-list">
+              <li>Rebala Village relies on complementary water infrastructure: a Government RWSS Mineral Water Plant (₹5
+                coin-operated 20L dispensing and mobile tanker option), an elevated Overhead Water Storage Tank,
+                indoor/outdoor multi-tap points, a shared washing platform, residential hand pumps, and an outdoor
+                pumping installation.</li>
+              <li>Accessibility varies by locality, making well-maintained neighborhood hand pumps and public standposts
+                important for reducing household collection effort—particularly noted during elderly resident
+                interactions.</li>
+              <li>Proper drainage, clean surroundings around shared washing platforms, and leak-free taps are visibly
+                central to keeping public water points hygienic and usable.</li>
+              <li>Interactive discussions at the local school demonstrated strong student receptiveness to practical
+                conservation habits and safeguarding shared community taps.</li>
+            </ul>
+          </div>
+
+          <div class="findings-col findings-col--unconfirmed">
+            <span class="mono-pill mono-pill--amber">Not Claimed Without Evidence</span>
+            <h3>Items Requiring Further Confirmation</h3>
+            <ul class="editorial-list">
+              <li><strong>Laboratory Water Quality:</strong> No TDS, pH, bacterial, or chemical potability tests were
+                carried out; water safety cannot be certified from visual inspection alone.</li>
+              <li><strong>Technical Capacities:</strong> Exact storage volume of the overhead reservoir (litres),
+                pumping horsepower, borewell depths, and household connection totals were not documented.</li>
+              <li><strong>Approximate Map Pins:</strong> While the India Mark II hand-pump location is GPS ground-truth
+                verified (<code>14.520941° N, 79.904295° E</code>), the remaining five facility coordinates remain
+                approximate field-referenced locations (~150–250 m) awaiting standalone device GPS fixes.</li>
+              <li><strong>Household Sample Metrics:</strong> Qualitative resident interviews were conducted rather than
+                a statistically quantified household census.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Five Recommendations -->
+        <div class="subsection reveal">
+          <div class="subsection-head">
+            <span class="mono-label">06.A · Actionable Priorities</span>
+            <h3 class="editorial-h3">Documented Recommendations</h3>
+          </div>
+          <div class="recommendations-grid">
+            <article class="rec-item">
+              <span class="rec-item__num">R1</span>
+              <h4>Public Facility Maintenance</h4>
+              <p>Conduct regular inspections of public standposts, connecting pipelines, valves, and hand pumps to
+                repair leaks promptly and reduce preventable water loss.</p>
+            </article>
+            <article class="rec-item">
+              <span class="rec-item__num">R2</span>
+              <h4>Platform Sanitation &amp; Drainage</h4>
+              <p>Keep multi-tap washing platforms, standpost aprons, and surrounding collection areas clean with clear
+                drainage channels to prevent stagnant water accumulation.</p>
+            </article>
+            <article class="rec-item">
+              <span class="rec-item__num">R3</span>
+              <h4>Energy &amp; Pumping Reliability</h4>
+              <p>Maintain reliable power and pumping upkeep so elevated storage reservoirs and community
+                water-dispensing points operate consistently.</p>
+            </article>
+            <article class="rec-item">
+              <span class="rec-item__num">R4</span>
+              <h4>Water-Quality Transparency</h4>
+              <p>Support periodic, documented water-quality testing at mineral water plants and community outlets so
+                residents have clear assurance of drinking water safety.</p>
+            </article>
+            <article class="rec-item">
+              <span class="rec-item__num">R5</span>
+              <h4>Preventive Upkeep &amp; Awareness</h4>
+              <p>Sustain community participation and youth awareness around careful household storage, rainwater
+                conservation, and shared infrastructure care.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Water Conservation & Government Initiatives -->
+        <div class="subsection reveal">
+          <div class="subsection-head">
+            <span class="mono-label">06.B · Conservation &amp; Public Policy Context</span>
+            <h3 class="editorial-h3">Water Conservation &amp; Government Initiatives</h3>
+          </div>
+
+          <div class="conservation-banner">
+            <p>
+              <strong>Conservation Priorities from the Report:</strong> Repairing leaking taps and pipelines,
+              maintaining clean household storage vessels, protecting village ponds and surface water bodies,
+              encouraging rainwater harvesting for groundwater recharge, and strengthening local community participation
+              to counter seasonal rainfall variability.
+            </p>
+          </div>
+
+          <div class="schemes-ledger">
+            <article class="scheme-row">
+              <div class="scheme-row__meta">
+                <span class="mono-label">Launched Aug 2019</span>
+                <h4>Jal Jeevan Mission (JJM)</h4>
+              </div>
+              <p>Government of India mission aimed at providing Functional Household Tap Connections (FHTC) to every
+                rural household with regular, adequate, safe drinking water while encouraging community planning,
+                groundwater recharge, and source sustainability.</p>
+            </article>
+
+            <article class="scheme-row">
+              <div class="scheme-row__meta">
+                <span class="mono-label">Launched 01 Oct 2021</span>
+                <h4>AMRUT 2.0</h4>
+              </div>
+              <p>Atal Mission for Rejuvenation and Urban Transformation 2.0 focuses on making cities water-secure
+                through household tap connections, urban supply infrastructure, water-body rejuvenation, rainwater
+                harvesting, and reuse of treated wastewater.</p>
+            </article>
+
+            <article class="scheme-row">
+              <div class="scheme-row__meta">
+                <span class="mono-label">Launched 2019</span>
+                <h4>Jal Shakti Abhiyan – Catch the Rain</h4>
+              </div>
+              <p>National water conservation campaign promoting rainwater collection wherever and whenever it falls
+                through rainwater harvesting structures, groundwater recharge measures, and community participation.</p>
+            </article>
+
+            <article class="scheme-row">
+              <div class="scheme-row__meta">
+                <span class="mono-label">Report Date: 01 Jun 2026</span>
+                <h4>Jal Sanchay Jan Bhagidari: Catch the Rain (2026)</h4>
+              </div>
+              <p>Documented in the CSP report as focusing on community-driven water conservation, low-cost rainwater
+                harvesting structures, local groundwater recharge, and participation by educational institutions and
+                local bodies.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CHAPTER 07: PROJECT TEAM, ACADEMIC CREDITS, TRANSPARENCY & CONCLUSION
+         ========================================================= -->
+    <section class="section section--stone" id="team" aria-labelledby="team-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-index">Chapter 07</span>
+          <h2 class="section-title" id="team-heading">Project Team, Academic Credits &amp; Conclusion</h2>
+          <p class="section-subtitle">
+            Verified student and faculty attribution from the official CSP Program Book, institutional acknowledgments,
+            and open verification records.
+          </p>
+        </header>
+
+        <div class="credits-grid reveal">
+          <article class="credit-block">
+            <span class="mono-label">Officially Documented Student</span>
+            <h3>Shaik Fameed</h3>
+            <p class="credit-block__id">Registration No: <code>24JNA31032</code></p>
+            <p>
+              UG B.Tech (2024–2028 Batch) · III Year during fieldwork<br>
+              Department of Artificial Intelligence (AI)<br>
+              Sree Venkateswara College of Engineering, Nellore
+            </p>
+            <p class="credit-block__note">
+              <em>Team Roster Note:</em> Additional student members appearing in fieldwork group photographs are not
+              listed here pending official name and registration confirmation.
+            </p>
+          </article>
+
+          <article class="credit-block">
+            <span class="mono-label">Faculty Guide</span>
+            <h3>Mr. T.S. Raj Kumar</h3>
+            <p class="credit-block__id">Assistant Professor · Dept. of Artificial Intelligence (AI)</p>
+            <p>
+              Sree Venkateswara College of Engineering<br>
+              North Rajupalem, Kodavaluru Mandal, SPSR Nellore District – 524316
+            </p>
+            <p class="credit-block__note">
+              Provided continuous academic mentorship, fieldwork review, and report guidance throughout the Community
+              Service Project.
+            </p>
+          </article>
+        </div>
+
+        <div class="acknowledgments reveal">
+          <div class="subsection-head">
+            <span class="mono-label">Institutional &amp; Community Support</span>
+            <h3 class="editorial-h3">Acknowledgments Recorded in Report</h3>
+          </div>
+          <dl class="ack-grid">
+            <div class="ack-item">
+              <dt>CSP Coordinator</dt>
+              <dd>Mrs. Shaik Madeena</dd>
+            </div>
+            <div class="ack-item">
+              <dt>Head of Department (AI)</dt>
+              <dd>Dr. P. Nagendra Babu, Ph.D.</dd>
+            </div>
+            <div class="ack-item">
+              <dt>Principal (SVCN)</dt>
+              <dd>Dr. M. Sreenivasa Kumar, M.Tech, Ph.D.</dd>
+            </div>
+            <div class="ack-item">
+              <dt>CHAIRMAN (SVCN)</dt>
+              <dd>Dr. P. Guna Sekhar</dd>
+            </div>
+            <div class="ack-item">
+              <dt>Community Coordination</dt>
+              <dd>Rebala Gram Sachivalayam (Swarna Rebala 1 &amp; 2) Officials &amp; Volunteers</dd>
+            </div>
+            <div class="ack-item">
+              <dt>Local Participants</dt>
+              <dd>Rebala Village Residents, Mineral Water Plant Staff &amp; School Students</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Open Verification Ledger -->
+        <div class="transparency-ledger reveal">
+          <span class="mono-label">Editorial &amp; Academic Integrity Log</span>
+          <h3>Items Flagged for Final Confirmation</h3>
+          <ul class="transparency-ledger__list">
+            <li><strong>Overall End Date Discrepancy:</strong> Weekly logs run <code>01 June – 25 July 2026</code> (8
+              weeks), whereas the Program Book cover sheet lists <code>01/06/26 – 12/07/26</code>. No definitive overall
+              end date is published until confirmed.</li>
+            <li><strong>Facility GPS Coordinates:</strong> The India Mark II hand-pump waypoint is GPS ground-truth
+              verified (<code>14.520941° N, 79.904295° E</code>); the other five facility pins retain their approximate
+              field-referenced classification (~150–250 m) pending standalone GPS verification.</li>
+            <li><strong>Visual Archive Breakdown:</strong> Includes 11 original village fieldwork photographs across
+              Weeks 1–6 and 9 completed-website documentation screenshots across Weeks 7 and 8 (20 total documented
+              items).</li>
+            <li><strong>Additional Student Members:</strong> Names and registration numbers of additional students
+              visible in group photos await official confirmation.</li>
+          </ul>
+        </div>
+
+        <!-- Conclusion -->
+        <article class="conclusion-box reveal">
+          <span class="section-index">Conclusion</span>
+          <h3>Closing Synthesis</h3>
+          <p>
+            Safe, accessible drinking water is foundational to rural health, hygiene, and everyday dignity. Through
+            direct fieldwork in Rebala Village—spanning administrative engagement at the Gram Sachivalayam, school
+            awareness sessions, physical inspection of the RWSS mineral water plant, overhead storage reservoir, public
+            taps, multi-tap washing platform, hand pumps, and pumping infrastructure—this Community Service Project
+            connected academic inquiry with real community conditions. By organizing these verified observations and
+            providing a structured digital documentary archive, this platform aims to support responsible water
+            conservation, regular facility maintenance, and lasting awareness across the community.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-brand__title">Water Facilities and Drinking Water Availability in Rebala Village</p>
+        <p class="footer-brand__meta">
+          Community Service Project · Dept. of Artificial Intelligence · Sree Venkateswara College of Engineering ·
+          B.Tech (2024–2028 Batch)
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="#overview">Overview</a>
+        <a href="#journey">Weeks 1–8</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#map-section">Study Map</a>
+        <a href="#archive">Photo Archive</a>
+        <a href="#team">Team &amp; Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Anchor -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Scroll back to top" hidden>
+    <span aria-hidden="true">↑</span>
+    <span>Top</span>
+  </button>
+
+  <!-- Full-Screen Accessible Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+    <div class="lightbox__backdrop" data-lightbox-close></div>
+    <div class="lightbox__dialog">
+      <div class="lightbox__topbar">
+        <span class="mono-label lightbox__counter" id="lightbox-counter">1 / 1</span>
+        <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Close photograph viewer">
+          Close (Esc)
+        </button>
+      </div>
+
+      <div class="lightbox__stage">
+        <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightbox-prev"
+          aria-label="Previous photograph">
+          <span aria-hidden="true">←</span>
+        </button>
+        <figure class="lightbox__figure">
+          <div class="lightbox__img-wrap">
+            <img id="lightbox-image" alt="">
+          </div>
+          <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+          <p class="lightbox__meta mono-label" id="lightbox-meta"></p>
+        </figure>
+        <button type="button" class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next photograph">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Central Photo & Map Registry + Application Logic (non-blocking, instant local load) -->
+  <script src="assets/js/photos.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>
